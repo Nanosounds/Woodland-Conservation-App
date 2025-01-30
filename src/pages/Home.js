@@ -17,6 +17,7 @@
  * @author Raish Raj Joshi, Tania Terence
  */
 
+import React from "react";
 import { useState } from "react"; // React hook for managing state
 import { FaVolumeUp, FaPause } from "react-icons/fa"; // Icons for text-to-speech buttons
 import image from "../assets/Light BG Image.jpg"; // Background image for the hero section
@@ -35,7 +36,7 @@ export default function Home() {
    * Handles text-to-speech functionality by toggling speech synthesis for the given text.
    *
    * @param {string} text - The text to be spoken.
-   * 
+   *
    * @author Raish Raj Joshi
    */
   const handleSpeakText = (text) => {

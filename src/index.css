@@ -11,12 +11,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
 /* Global Styles */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Calibri", sans-serif; /* Global font family */
+  font-family: "Poppins", "Calibri", sans-serif; /* Global font family */
   font-weight: 300;
   line-height: 1.5;
   @apply transition-colors duration-200; /* Smooth color transitions */

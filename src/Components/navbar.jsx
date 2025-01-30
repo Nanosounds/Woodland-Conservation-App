@@ -9,6 +9,7 @@
  *         Tania Terence - Murf AI text to speech, and footer for the website.
  */
 
+import React from "react";
 import { useRef, useState, useEffect } from "react";
 import {
   FaBars,
@@ -173,7 +174,7 @@ function Footer() {
         </div>
         {/* Address and Copyright */}
         <div className="flex flex-col sm:flex-row sm:justify-between gap-4 pr-[15px] w-[170px] sm:w-[900px]">
-          <p className="text-[12px] sm:text-sm">
+          <p className="text-[12px] sm:text-sm sm:ml-[-175px]">
             Head Of St Margarets Bay, NS B3Z 2C9
           </p>
           <p className="text-[10px] sm:text-xs">

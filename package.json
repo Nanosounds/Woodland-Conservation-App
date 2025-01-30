@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
-    "start:frontend": "HTTPS=true PORT=3080 react-scripts start",
+    "start:frontend": "react-scripts start",
     "start:backend": "node OTPserver/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
