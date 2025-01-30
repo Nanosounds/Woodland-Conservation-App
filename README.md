@@ -1,3 +1,8 @@
+### - Node.js and npm must be installed on your machine.
+### - `npm install` when in project folder to install dependencies.
+### - `npm start` to start app.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
