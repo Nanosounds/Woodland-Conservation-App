@@ -47,7 +47,7 @@ module.exports = {
           background: "#d1f7d1",
           text: "##fffcd3",
           primary: "#3498db",
-          highlight: "#3498db",
+          highlight: "#8ab4f8",
           border: "#dfe6e9",
         },
         dark: {
@@ -61,7 +61,7 @@ module.exports = {
           background: "#1c1f26",
           text: "#fffcd3",
           primary: "#8ab4f8",
-          highlight: "#8ab4f8",
+          highlight: "#3498db",
           border: "#2d323d",
         },
       },

@@ -23,7 +23,7 @@ import { Route, Routes } from "react-router-dom"; // Routing utilities from reac
  */
 function App() {
   return (
-    <div className="flex flex-col min-h-screen font-sans">
+    <div className="flex flex-col min-h-screen font-sans w-full overflow-x-hidden">
       {" "}
       {/* Container for the entire application */}
       {/* Navbar */}

@@ -17,6 +17,7 @@ const About = () => {
        * Source credit: Murf AI Voice Generator (Web Version) - "https://murf.ai/"
        *Author: Tania Terence
        */}
+      {/*
       <iframe
         className="murf-embed w-full"
         height="102"
@@ -26,6 +27,7 @@ const About = () => {
         style={{ border: "none" }}
       ></iframe>
       <script src="https://murf.ai/embeds/widget.js"></script>
+      */}
 
       {/*Snap Effect when scrolling*/}
       <div className="snap-y snap-mandatory overflow-y-scroll h-screen">
@@ -45,7 +47,7 @@ const About = () => {
 
           {/*Text content (About) and background overlay*/}
           <div className="absolute flex flex-col items-center justify-center h-screen bg-gray-900 bg-opacity-[0.6] dark:bg-opacity-[0.7]">
-            <div className="text-center text-black bg-[#567c3a] bg-opacity-[0.58] py-[25px] dark:bg-opacity-0 dark:text-[#ffffe8]">
+            <div className="text-center text-white bg-[#567c3a] bg-opacity-[0.58] py-[25px] dark:bg-opacity-0 dark:text-[#ffffe8]">
               <h1 className="text-[25px] sm:text-[35px]">
                 <b>ABOUT </b>
               </h1>
@@ -88,7 +90,7 @@ const About = () => {
 
           {/*Text content (Vision) and background overlay*/}
           <div className="absolute flex flex-col items-center justify-center h-screen bg-gray-900 bg-opacity-[0.4] dark:bg-opacity-[0.7]">
-            <div className="text-center text-black py-[30px] bg-[#823d37] bg-opacity-[0.75] py-[25px] dark:bg-opacity-0 dark:text-[#ffffe8]">
+            <div className="text-center text-white py-[30px] bg-[#823d37] bg-opacity-[0.75] py-[25px] dark:bg-opacity-0 dark:text-[#ffffe8]">
               <h1
                 data-cy="vision-heading"
                 className="text-[25px] sm:text-[35px]"
@@ -124,7 +126,7 @@ const About = () => {
 
           {/*Text content (Mission) and overlay*/}
           <div className="absolute flex flex-col items-center justify-center h-screen bg-gray-900 bg-opacity-[0.5] dark:bg-opacity-[0.7]">
-            <div className="text-center text-black py-[30px] bg-[#5c7335] bg-opacity-[0.7] py-[25px] dark:bg-opacity-0 dark:text-[#ffffe8]">
+            <div className="text-center text-white py-[30px] bg-[#5c7335] bg-opacity-[0.7] py-[25px] dark:bg-opacity-0 dark:text-[#ffffe8]">
               <h1
                 data-cy="mission-heading"
                 className="text-[25px] sm:text-[35px]"

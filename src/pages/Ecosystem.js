@@ -59,14 +59,14 @@ const Ecosystem = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="relative min-h-screen w-full overflow-x-hidden">
       {/* Ecosystem Section */}
-      <main className="container mx-auto px-4 py-8">
-        <section className="mb-12 sm:pl-20">
+      <main className="relative w-full mx-auto px-4 py-8 sm:pl-20">
+        <section className="relative mb-12 sm:pl-20">
           {/* Ecosystem Heading and TTS Button*/}
-          <div className="flex items-center mb-4 pt-20">
-            <TbTrees className="text-green-700 dark:text-green-300 text-8xl mr-3" />
-            <h2 className="text-7xl font-semibold text-blue-500 pl-2 pr-2">
+          <div className="flex items-center gap-2 mb-4 pt-10">
+            <TbTrees className="text-green-700 dark:text-green-300 text-5xl sm:text-8xl" />
+            <h2 className="text-4xl sm:text-7xl font-semibold text-blue-500 pl-2 pr-2">
               Ecosystem
             </h2>
             <button
@@ -86,10 +86,10 @@ const Ecosystem = () => {
               )}
             </button>
           </div>
-          <div className="grid sm:grid-cols-2 gap-6">
-            {/* Ecosystem Decscriptive Text and Lake Image */}
+          <div className="grid sm:grid-cols-2 gap-6 w-full">
+            {/* Ecosystem Descriptive Text and Lake Image */}
             <div className="flex flex-col justify-center items-center">
-              <p className="text-1g sm:text-2xl leading-relaxed pt-5 pb-10 w-full sm:w-[650px]">
+              <p className="text-1g sm:text-2xl leading-relaxed pb-10 w-full sm:pl-20">
                 This woodland conservation site is home to a diverse and vibrant
                 ecosystem, teeming with life and natural beauty. Our woodlands
                 are characterized by a rich variety of flora and fauna, each
@@ -97,11 +97,11 @@ const Ecosystem = () => {
               </p>
               <div className="flex gap-4">
                 <div className="flex flex-col gap-4">
-                  <div className="flex relative pt-10 px-auto justify-center items-center">
+                  <div className="flex relative pt-5 px-auto justify-center items-center">
                     <img
                       src={lake}
                       alt="Lake"
-                      className="sm:pr-0 h-auto rounded shadow-md"
+                      className="max-w-full h-auto rounded shadow-md"
                     />
                   </div>
                 </div>
@@ -109,34 +109,32 @@ const Ecosystem = () => {
             </div>
 
             {/* Flipping Images and TTS Buttons */}
-            <div className="flex gap-4 justify-center sm:pl-20">
+            <div className="relative flex gap-4 justify-center">
               <div className="flex flex-col gap-4">
                 <div className="relative w-64 h-64 group [transform-style:preserve-3d] perspective">
+                  {/* TTS Button */}
+                  <button
+                    onClick={() =>
+                      handleSpeakText(
+                        "Herons are wading birds known for their long legs and necks, often found near water bodies."
+                      )
+                    }
+                    className="mr-4 p-2 bg-transparent text-blue-500 hover:text-blue-700 rounded-full shadow-lg hover:bg-light-primary transition-all duration-300"
+                    aria-label="Read out loud"
+                  >
+                    {speakingText ===
+                    "Herons are wading birds known for their long legs and necks, often found near water bodies." ? (
+                      <FaPause className="text-xl" />
+                    ) : (
+                      <FaVolumeUp className="text-xl" />
+                    )}
+                  </button>
                   <div className="absolute inset-0 transform transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                    {/* TTS Button */}
-                    <button
-                      onClick={() =>
-                        handleSpeakText(
-                          "Herons are wading birds known for their long legs and necks, often found near water bodies."
-                        )
-                      }
-                      className="mr-4 p-2 bg-transparent text-blue-500 hover:text-blue-700 rounded-full shadow-lg hover:bg-light-primary transition-all duration-300"
-                      aria-label="Read out loud"
-                    >
-                      {speakingText ===
-                      "Herons are wading birds known for their long legs and necks, often found near water bodies." ? (
-                        <FaPause className="text-xl" />
-                      ) : (
-                        <FaVolumeUp className="text-xl" />
-                      )}
-                    </button>
-
                     {/* Heron Image */}
                     <div
-                      className="absolute inset-0 rounded-full shadow-md bg-cover bg-center [backface-visibility:hidden]"
+                      className="absolute inset-0 inset-0 rounded-full shadow-md bg-cover bg-center [backface-visibility:hidden]"
                       style={{ backgroundImage: `url(${heron})` }}
                     ></div>
-
                     {/* Text on back side of image */}
                     <div className="absolute inset-0 flex items-center justify-center bg-light-background text-black dark:bg-gray-800 dark:text-dark-text text-center rounded-full [backface-visibility:hidden] [transform:rotateY(180deg)]">
                       <p className="px-10">
@@ -146,32 +144,31 @@ const Ecosystem = () => {
                     </div>
                   </div>
                 </div>
-                <div className="relative w-64 h-64 group ml-[190px] sm:ml-64 [transform-style:preserve-3d] perspective">
+
+                <div className="relative w-64 h-64 group ml-[125px] [transform-style:preserve-3d] perspective">
+                  {/* TTS Button */}
+                  <button
+                    onClick={() =>
+                      handleSpeakText(
+                        "Deer are graceful herbivores, commonly found in forests and grasslands."
+                      )
+                    }
+                    className="mr-4 p-2 bg-transparent text-blue-500 hover:text-blue-700 rounded-full shadow-lg hover:bg-light-primary transition-all duration-300"
+                    aria-label="Read out loud"
+                  >
+                    {speakingText ===
+                    "Deer are graceful herbivores, commonly found in forests and grasslands." ? (
+                      <FaPause className="text-xl" />
+                    ) : (
+                      <FaVolumeUp className="text-xl" />
+                    )}
+                  </button>
                   <div className="absolute inset-0 transform transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                     {/* Deer Image */}
                     <div
                       className="absolute inset-0 rounded-full shadow-md bg-cover bg-center [backface-visibility:hidden]"
                       style={{ backgroundImage: `url(${deer})` }}
                     ></div>
-
-                    {/* TTS Button */}
-                    <button
-                      onClick={() =>
-                        handleSpeakText(
-                          "Deer are graceful herbivores, commonly found in forests and grasslands."
-                        )
-                      }
-                      className="mr-4 p-2 bg-transparent text-blue-500 hover:text-blue-700 rounded-full shadow-lg hover:bg-light-primary transition-all duration-300"
-                      aria-label="Read out loud"
-                    >
-                      {speakingText ===
-                      "Deer are graceful herbivores, commonly found in forests and grasslands." ? (
-                        <FaPause className="text-xl" />
-                      ) : (
-                        <FaVolumeUp className="text-xl" />
-                      )}
-                    </button>
-
                     {/* Text on back side of image */}
                     <div className="absolute inset-0 flex items-center justify-center bg-light-background text-black dark:bg-gray-800 dark:text-dark-text text-center rounded-full [backface-visibility:hidden] [transform:rotateY(180deg)]">
                       <p className="px-10">
@@ -181,30 +178,31 @@ const Ecosystem = () => {
                     </div>
                   </div>
                 </div>
+
                 <div className="relative w-64 h-64 group [transform-style:preserve-3d] perspective">
+                  {/* TTS Button */}
+                  <button
+                    onClick={() =>
+                      handleSpeakText(
+                        "The coyote is a highly adaptable, opportunistic predator, playing a key role in maintaining the balance of local ecosystems by controlling populations of small mammals."
+                      )
+                    }
+                    className="mr-4 p-2 bg-transparent text-blue-500 hover:text-blue-700 rounded-full shadow-lg hover:bg-light-primary transition-all duration-300"
+                    aria-label="Read out loud"
+                  >
+                    {speakingText ===
+                    "The coyote is a highly adaptable, opportunistic predator, playing a key role in maintaining the balance of local ecosystems by controlling populations of small mammals." ? (
+                      <FaPause className="text-xl" />
+                    ) : (
+                      <FaVolumeUp className="text-xl" />
+                    )}
+                  </button>
                   <div className="absolute inset-0 transform transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                     {/* Coyote Image */}
                     <div
                       className="absolute inset-0 rounded-full shadow-md bg-cover bg-center [backface-visibility:hidden]"
                       style={{ backgroundImage: `url(${coyote})` }}
                     ></div>
-                    <button
-                      onClick={() =>
-                        handleSpeakText(
-                          "The coyote is a highly adaptable, opportunistic predator, playing a key role in maintaining the balance of local ecosystems by controlling populations of small mammals."
-                        )
-                      }
-                      className="mr-4 p-2 bg-transparent text-blue-500 hover:text-blue-700 rounded-full shadow-lg hover:bg-light-primary transition-all duration-300"
-                      aria-label="Read out loud"
-                    >
-                      {speakingText ===
-                      "The coyote is a highly adaptable, opportunistic predator, playing a key role in maintaining the balance of local ecosystems by controlling populations of small mammals." ? (
-                        <FaPause className="text-xl" />
-                      ) : (
-                        <FaVolumeUp className="text-xl" />
-                      )}
-                    </button>
-
                     {/* Text on back side of image */}
                     <div className="absolute inset-0 flex items-center justify-center bg-light-background text-black dark:bg-gray-800 dark:text-dark-text text-center rounded-full [backface-visibility:hidden] [transform:rotateY(180deg)]">
                       <p className="px-10 text-sm">
@@ -215,7 +213,6 @@ const Ecosystem = () => {
                       </p>
                     </div>
                   </div>
-                  {/* TTS Button */}
                 </div>
               </div>
             </div>
@@ -279,11 +276,11 @@ const Ecosystem = () => {
       </section>
 
       {/* Padding between list section and Flora/Fauna/Fungi section */}
-      <div className="py-8"></div>
+      <div className="py-4"></div>
 
       {/* Flora, Fauna, and Fungi Section */}
       <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-full">
           <div className="bg-light-background text-light-text dark:bg-gray-800 dark:text-dark-text p-4 rounded-lg shadow-lg hover:scale-105 transition-all duration-300">
             {/* Flora Section */}
             <div className="pt-6 pb-6">
@@ -399,6 +396,9 @@ const Ecosystem = () => {
           </div>
         </div>
       </div>
+
+      {/* Padding between Flora/Fauna/Fungi section and footer*/}
+      <div className="py-4"></div>
     </div>
   );
 };

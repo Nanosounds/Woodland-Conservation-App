@@ -64,6 +64,7 @@ export default function Home() {
   return (
     <div>
       {/* Murf AI Embed for Text-to-Speech - Tania Terence*/}
+      {/*}
       <iframe
         className="murf-embed w-full"
         height="102"
@@ -73,6 +74,7 @@ export default function Home() {
         style={{ border: "none" }}
       ></iframe>
       <script src="https://murf.ai/embeds/widget.js"></script>
+      */}
 
       {/* Hero Section */}
       <div
@@ -133,81 +135,95 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Conservation Projects Card */}
           <div className="bg-light-background text-black dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-all duration-300">
-            <h3 className="text-xl font-semibold mb-4">
-              Conservation Projects
-            </h3>
-            <p>
-              We focus on preserving natural habitats and wildlife to ensure a
-              healthy ecosystem for future generations.
-            </p>
-            <button
-              onClick={() =>
-                handleSpeakText(
-                  "We focus on preserving natural habitats and wildlife to ensure a healthy ecosystem for future generations."
-                )
-              }
-              className="mr-4 p-2 bg-transparent text-blue-500 rounded-full shadow-lg hover:bg-light-primary transition-all duration-300"
-              aria-label="Read out loud"
-            >
-              {speakingText ===
-              "We focus on preserving natural habitats and wildlife to ensure a healthy ecosystem for future generations." ? (
-                <FaPause className="text-xl" />
-              ) : (
-                <FaVolumeUp className="text-xl" />
-              )}
-            </button>
+            <div className="flex flex-col pt-7 pb-7">
+              <div className="flex">
+                <h3 className="text-2xl font-semibold pr-2">
+                  Conservation Projects
+                </h3>
+                <button
+                  onClick={() =>
+                    handleSpeakText(
+                      "We focus on preserving natural habitats and wildlife to ensure a healthy ecosystem for future generations."
+                    )
+                  }
+                  className="mr-4 p-2 bg-transparent text-blue-500 hover:text-blue-700 rounded-full shadow-lg hover:bg-light-primary transition-all duration-300"
+                  aria-label="Read out loud"
+                >
+                  {speakingText ===
+                  "We focus on preserving natural habitats and wildlife to ensure a healthy ecosystem for future generations." ? (
+                    <FaPause className="text-xl" />
+                  ) : (
+                    <FaVolumeUp className="text-xl" />
+                  )}
+                </button>
+              </div>
+              <p className="pt-3">
+                We focus on preserving natural habitats and wildlife to ensure a
+                healthy ecosystem for future generations.
+              </p>
+            </div>
           </div>
 
           {/* Sustainable Practices Card */}
           <div className="bg-light-background text-black dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-all duration-300">
-            <h3 className="text-xl font-semibold mb-4">
-              Sustainable Practices
-            </h3>
-            <p>
-              Learn about eco-friendly practices that help reduce our carbon
-              footprint and contribute to a greener planet.
-            </p>
-            <button
-              onClick={() =>
-                handleSpeakText(
-                  "Learn about eco-friendly practices that help reduce our carbon footprint and contribute to a greener planet."
-                )
-              }
-              className="mr-4 p-2 bg-transparent text-blue-500 rounded-full shadow-lg hover:bg-light-primary transition-all duration-300"
-              aria-label="Read out loud"
-            >
-              {speakingText ===
-              "Learn about eco-friendly practices that help reduce our carbon footprint and contribute to a greener planet." ? (
-                <FaPause className="text-xl" />
-              ) : (
-                <FaVolumeUp className="text-xl" />
-              )}
-            </button>
+            <div className="flex flex-col pt-7 pb-7">
+              <div className="flex">
+                <h3 className="text-2xl font-semibold pr-2">
+                  Sustainable Practices
+                </h3>
+                <button
+                  onClick={() =>
+                    handleSpeakText(
+                      "Learn about eco-friendly practices that help reduce our carbon footprint and contribute to a greener planet."
+                    )
+                  }
+                  className="mr-4 p-2 bg-transparent text-blue-500 hover:text-blue-700 rounded-full shadow-lg hover:bg-light-primary transition-all duration-300"
+                  aria-label="Read out loud"
+                >
+                  {speakingText ===
+                  "Learn about eco-friendly practices that help reduce our carbon footprint and contribute to a greener planet." ? (
+                    <FaPause className="text-xl" />
+                  ) : (
+                    <FaVolumeUp className="text-xl" />
+                  )}
+                </button>
+              </div>
+              <p className="pt-3">
+                Learn about eco-friendly practices that help reduce our carbon
+                footprint and contribute to a greener planet.
+              </p>
+            </div>
           </div>
 
           {/* Wildlife Protection Card */}
           <div className="bg-light-background text-black dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-all duration-300">
-            <h3 className="text-xl font-semibold mb-4">Wildlife Protection</h3>
-            <p>
-              We are committed to protecting endangered species and restoring
-              biodiversity to our natural surroundings.
-            </p>
-            <button
-              onClick={() =>
-                handleSpeakText(
-                  "We are committed to protecting endangered species and restoring biodiversity to our natural surroundings."
-                )
-              }
-              className="mr-4 p-2 bg-transparent text-blue-500 rounded-full shadow-lg hover:bg-light-primary transition-all duration-300"
-              aria-label="Read out loud"
-            >
-              {speakingText ===
-              "We are committed to protecting endangered species and restoring biodiversity to our natural surroundings." ? (
-                <FaPause className="text-xl" />
-              ) : (
-                <FaVolumeUp className="text-xl" />
-              )}
-            </button>
+            <div className="flex flex-col pt-7 pb-7">
+              <div className="flex">
+                <h3 className="text-2xl font-semibold pr-2">
+                  Wildlife Protection
+                </h3>
+                <button
+                  onClick={() =>
+                    handleSpeakText(
+                      "We are committed to protecting endangered species and restoring biodiversity to our natural surroundings."
+                    )
+                  }
+                  className="mr-4 p-2 bg-transparent text-blue-500 hover:text-blue-700 rounded-full shadow-lg hover:bg-light-primary transition-all duration-300"
+                  aria-label="Read out loud"
+                >
+                  {speakingText ===
+                  "We are committed to protecting endangered species and restoring biodiversity to our natural surroundings." ? (
+                    <FaPause className="text-xl" />
+                  ) : (
+                    <FaVolumeUp className="text-xl" />
+                  )}
+                </button>
+              </div>
+              <p className="pt-3">
+                We are committed to protecting endangered species and restoring
+                biodiversity to our natural surroundings.
+              </p>
+            </div>
           </div>
         </div>
       </div>
