@@ -1,3 +1,4 @@
+## To Host Locally
 ### - Node.js and npm must be installed on your machine.
 ### - `npm install` when in project folder to install dependencies.
 ### - `npm start` to start app.
