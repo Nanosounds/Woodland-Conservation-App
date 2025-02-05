@@ -1,6 +1,7 @@
 /**
  * @file Home.js
- * @description The Home Page component for the Woodland Conservation Site. This component includes a hero section, a text-to-speech feature for accessibility, and information about the site's conservation initiatives.
+ * @description The Home Page component for the Woodland Conservation Site. This component includes a hero section, a text-to-speech feature for accessibility,
+ * and information about the site's conservation initiatives.
  *
  * React functions and components are documented to ensure clarity and maintainability. Inline comments are used sparingly to provide context where necessary.
  *
@@ -14,7 +15,7 @@
  * - Background Image: Local asset located at "../assets/Light BG Image.jpg"
  * - Hero Section Image: https://www.pexels.com/
  *
- * @author Raish Raj Joshi, Tania Terence
+ * @author Raish Raj Joshi, Tania Terence, Alexander Colpitts
  */
 
 import React from "react";

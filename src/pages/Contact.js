@@ -1,16 +1,17 @@
-/*
-   This is the main component that will be rendered when the user navigates to the /contact route.
-    It contains a form that allows users to submit inquiries to the website admin.
-    The form includes fields for the user's full name, email address, inquiry type, and message.
-    The user must verify their email address by entering an OTP sent to their email before submitting the form.
-    The form data is validated on the client-side before submission.
-    If the form is successfully submitted, a confirmation email is sent to the user.
-    The form uses Axios to make HTTP requests to the backend server for sending OTP and confirmation emails.
-    The backend server code for handling these requests is provided in the OTPserver/server.js file.
-    The form includes error handling for invalid input and displays error messages to the user.
-    The form also includes a success message when the form is successfully submitted.
-    
-    Author: Mohammad Zaid Khan
+/**
+ * @file Contact.js
+ * @description This is the main component that will be rendered when the user navigates to the /contact route.
+ * It contains a form that allows users to submit inquiries to the website admin.
+ * The form includes fields for the user's full name, email address, inquiry type, and message.
+ * The user must verify their email address by entering an OTP sent to their email before submitting the form.
+ * The form data is validated on the client-side before submission.
+ * If the form is successfully submitted, a confirmation email is sent to the user.
+ * The form uses Axios to make HTTP requests to the backend server for sending OTP and confirmation emails.
+ * The backend server code for handling these requests is provided in the OTPserver/server.js file.
+ * The form includes error handling for invalid input and displays error messages to the user.
+ * The form also includes a success message when the form is successfully submitted.
+ *
+ * @author Mohammad Zaid Khan, Alexander Colpitts
  */
 import React, { useState } from "react";
 import axios from "axios";
@@ -58,7 +59,7 @@ const InquiryForm = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3069/send-otp", {
+      const response = await axios.post("http://13.59.148.15:3069/send-otp", {
         email: formData.email,
       });
       setOtpSent(true);
@@ -75,7 +76,7 @@ const InquiryForm = () => {
    */
   const verifyOtp = async () => {
     try {
-      const response = await axios.post("http://localhost:3069/verify-otp", {
+      const response = await axios.post("http://13.59.148.15:3069/verify-otp", {
         email: formData.email,
         otp: formData.otp,
       });
@@ -112,7 +113,7 @@ const InquiryForm = () => {
       try {
         // Submit the inquiry form
         const response = await axios.post(
-          "http://ugdev.cs.smu.ca:3069/send-confirmation",
+          "http://13.59.148.15:3069/send-confirmation",
           {
             email: formData.email,
             fullName: formData.fullName,

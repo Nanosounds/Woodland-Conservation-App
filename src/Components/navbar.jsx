@@ -5,8 +5,7 @@
  *
  * @module Navbar
  *
- * @author Raish Raj Joshi
- *         Tania Terence - Murf AI text to speech, and footer for the website.
+ * @author Raish Raj Joshi, Tania Terence, Alexander Colpitts
  */
 
 import React from "react";
@@ -26,11 +25,11 @@ import Weather from "./Weather";
 
 /**
  * Navbar Component
- * @description Displays a responsive navigation bar with dark mode toggle, weather widget, and links to application pages.
+ * Displays a responsive navigation bar with dark mode toggle, weather widget, and links to application pages.
  * Includes a mobile-friendly menu and tooltips for additional accessibility.
  * @returns {JSX.Element} The Navbar component.
  *
- * @author Raish Raj Joshi
+ * @author Raish Raj Joshi, Alexander Colpitts
  */
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false); // State for dark mode
@@ -148,7 +147,7 @@ export default function Navbar() {
  * @description Displays a footer with social media links, address, and copyright information.
  * @returns {JSX.Element} The Footer component.
  *
- * @author Tania Terence
+ * @author Tania Terence, Alexander Colpitts
  */
 function Footer() {
   return (
@@ -192,7 +191,7 @@ function Footer() {
  * @param {Object} props - Properties for the CustomLink component.
  * @returns {JSX.Element} A styled navigation link.
  *
- * @author Raish Raj Joshi
+ * @author Raish Raj Joshi, Alexander Colpitts
  */
 function CustomLink({ to, children, showNavbar, ...props }) {
   const resolvedPath = useResolvedPath(to);

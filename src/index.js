@@ -21,7 +21,7 @@ import App from "./App"; // Main application component
 import "./index.css"; // Global CSS styles for the application
 
 /**
- * Purpose: Render the main React application inside the root DOM element, wrapping it with routing functionality.
+ * @description Render the main React application inside the root DOM element, wrapping it with routing functionality.
  *
  * Parameters:
  * - None

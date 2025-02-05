@@ -1,6 +1,8 @@
 /**
- * Purpose: React component containing functionality and styles(Tailwind) for the About Page of the website, including a Text-to-Speech feature for the page's textual content.
- * @author Tania Terence
+ * @file About.js
+ * @description React component containing functionality and styles(Tailwind) for the About Page of the website, including a Text-to-Speech feature for the page's textual content.
+ *
+ * @author Tania Terence, Alexander Colpitts
  */
 
 import React from "react";

@@ -1,7 +1,8 @@
 /**
  * @file App.js
  * @description The main application entry point that renders the Navbar and manages routes for various pages of the Woodland Conservation Site.
- * @author Raish Raj Joshi
+ *
+ * @author Raish Raj Joshi, Alexander Colpitts
  */
 
 import React from "react";
