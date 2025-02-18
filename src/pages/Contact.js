@@ -59,7 +59,7 @@ const InquiryForm = () => {
     }
 
     try {
-      const response = await axios.post("http://172.31.8.143:3069/send-otp", {
+      const response = await axios.post("http://13.59.148.15:3069/send-otp", {
         email: formData.email,
       });
       setOtpSent(true);
@@ -76,7 +76,7 @@ const InquiryForm = () => {
    */
   const verifyOtp = async () => {
     try {
-      const response = await axios.post("http://172.31.8.143:3069/verify-otp", {
+      const response = await axios.post("http://13.59.148.15:3069/verify-otp", {
         email: formData.email,
         otp: formData.otp,
       });
@@ -113,7 +113,7 @@ const InquiryForm = () => {
       try {
         // Submit the inquiry form
         const response = await axios.post(
-          "http://172.31.8.143:3069/send-confirmation",
+          "http://13.59.148.15:3069/send-confirmation",
           {
             email: formData.email,
             fullName: formData.fullName,
