@@ -59,7 +59,7 @@ const InquiryForm = () => {
     }
 
     try {
-      const response = await axios.post("http://13.59.148.15:3069/send-otp", {
+      const response = await axios.post("https://13.59.148.15:3069/send-otp", {
         email: formData.email,
       });
       setOtpSent(true);
@@ -76,10 +76,13 @@ const InquiryForm = () => {
    */
   const verifyOtp = async () => {
     try {
-      const response = await axios.post("http://13.59.148.15:3069/verify-otp", {
-        email: formData.email,
-        otp: formData.otp,
-      });
+      const response = await axios.post(
+        "https://13.59.148.15:3069/verify-otp",
+        {
+          email: formData.email,
+          otp: formData.otp,
+        }
+      );
       setFormData({ ...formData, otpVerified: true });
       alert(response.data.message);
     } catch (err) {
@@ -113,7 +116,7 @@ const InquiryForm = () => {
       try {
         // Submit the inquiry form
         const response = await axios.post(
-          "http://13.59.148.15:3069/send-confirmation",
+          "https://13.59.148.15:3069/send-confirmation",
           {
             email: formData.email,
             fullName: formData.fullName,
